@@ -21,7 +21,3 @@ name=(u"Martin Jönsson")
 
 print(name.lower().replace(" ", "."))
 
-test=(u"Jönsson")
-
-print(test)
-

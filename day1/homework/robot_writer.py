@@ -35,11 +35,6 @@ def write_story(municipality, unemployment_2009, unemployment_2014):
 			print(pos_text)
 
 
-
-
-""" Testa roboten!
-"""
-
 write_story("Stockholm", 7.1, 6.6) 
 print("**************")
 
