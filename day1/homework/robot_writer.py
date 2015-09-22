@@ -8,7 +8,7 @@ total_unemployment_2009 = 5.9
 
 
 def write_story(municipality, unemployment_2009, unemployment_2014):
-	neg_text=("I "+municipality+" gar var %se utan jobb" %(100/unemployment_2014) +"\n"+ 
+	neg_text=("I "+municipality+" gar var %s:e utan jobb" %int(round(100/unemployment_2014)) +"\n"+ 
 		"Arbetslosheten i "+municipality+" var forra aret %s procent. " %unemployment_2014+
 		"Det ar %s procentenheter hogre an i riket som helhet." %abs(total_unemployment_2014-unemployment_2014)+
 		"Pa fem ar har arbetslosheten i "+municipality+" okat med %s procenenheter." %(unemployment_2014-unemployment_2009))
@@ -48,6 +48,7 @@ print("**************")
 
 write_story("Lessebo", 9.5, 13.2) 
 print("**************")
+
 
 """
 Källa: http://www.ekonomifakta.se/sv/Fakta/Regional-statistik/Din-kommun-i-siffror/
