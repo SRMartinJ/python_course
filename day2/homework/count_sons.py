@@ -139,11 +139,3 @@ print(
 	)
 
 
-print(perc_sons_of_total)
-
-
-print(counter_mp)
-print(sons_mp)
-
-print(counter_m)
-print(total_mps)
