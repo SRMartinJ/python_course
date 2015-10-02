@@ -12,19 +12,6 @@
     Det här motsvarar en rad i den kommande csv-filen som vi kommer att skapa
 """
 
-lista [
-    {
-        "municipality": "Stockholm",
-        "unemployment2014": 5.139667,
-        "unemployment2013": 5.404515,
-        "change": -0.264848,
-        "sentence": "Din beskrivnade mening här...",
-    }
-
-]
-
-
-
 import csv
 
 # Öppnar filen
