@@ -62,35 +62,36 @@ for row in data:
 	if "KD" in row["party"]:
 		total_kd=(total_kd+1)
     #counter_party
-	if "son," in row["name"] or "son " in row["name"] and "S" in row["party"]:
-		if "SD" in row["party"]:
-			counter_sd=(counter_sd+1)
-		else:
-			counter_s=(counter_s+1)
-	if "son," in row["name"] or "son " in row["name"] and "FP" in row["party"]:
-		counter_fp=(counter_fp+1)
-	if "son," in row["name"] or "son " in row["name"] and "M" in row["party"]:
-		if "MP" in row["party"]:
-			counter_mp=(counter_mp+1)
-		else:
-			counter_m=(counter_m+1)
-	if "son," in row["name"] or "son " in row["name"] and "C" in row["party"]:
-		counter_c=(counter_c+1)
-	if "son," in row["name"] or "son " in row["name"] and "V" in row["party"]:
-		counter_v=(counter_v+1)
-	if "son," in row["name"] or "son " in row["name"] and "KD" in row["party"]:
-		counter_kd=(counter_kd+1)
+	if "son," in row["name"] or "son " in row["name"]:
+		if "S" in row["party"]:
+			if "SD" in row["party"]:
+				counter_sd=(counter_sd+1)
+			else:
+				counter_s=(counter_s+1)
+		if "FP" in row["party"]:
+			counter_fp=(counter_fp+1)
+		if "M" in row["party"]:
+			if "MP" in row["party"]:
+				counter_mp=(counter_mp+1)
+			else:
+				counter_m=(counter_m+1)
+		if "C" in row["party"]:
+			counter_c=(counter_c+1)
+		if "V" in row["party"]:
+			counter_v=(counter_v+1)
+		if "KD" in row["party"]:
+			counter_kd=(counter_kd+1)
 
-perc_sd=(round(100*(counter_sd/total_sd)))
-perc_s=(round(100*(counter_s/total_s)))
-perc_fp=(round(100*(counter_fp/total_fp)))
-perc_mp=(round(100*(counter_mp/total_mp)))
-perc_m=(round(100*(counter_m/total_m)))
-perc_c=(round(100*(counter_c/total_c)))
-perc_v=(round(100*(counter_v/total_v)))
-perc_kd=(round(100*(counter_kd/total_kd)))
+perc_sd=(int(round(100*(counter_sd/total_sd))))
+perc_s=(int(round(100*(counter_s/total_s))))
+perc_fp=(int(round(100*(counter_fp/total_fp))))
+perc_mp=(int(round(100*(counter_mp/total_mp))))
+perc_m=(int(round(100*(counter_m/total_m))))
+perc_c=(int(round(100*(counter_c/total_c))))
+perc_v=(int(round(100*(counter_v/total_v))))
+perc_kd=(int(round(100*(counter_kd/total_kd))))
 
-perc_total_names=(round(100*(counter_son_names/total_number_of_mps)))
+perc_total_names=(int(round(100*(counter_son_names/total_number_of_mps))))
 
 print("Av %s ledamöter har %s son-namn. Det motsvarar %s procent." 
 	%(total_number_of_mps, int(counter_son_names), perc_total_names))
@@ -111,6 +112,11 @@ print("I Vänsterpartiet har %s procent av ledamöterna ett son-namn (%s/%s)."
 	%(perc_v, int(counter_v), int(total_v)))
 print("I Kristdemokraterna har %s procent av ledamöterna ett son-namn (%s/%s)." 
 	%(perc_kd, int(counter_kd), int(total_kd)))
+
+
+
+
+
 
 
 
